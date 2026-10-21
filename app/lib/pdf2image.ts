@@ -13,6 +13,7 @@ async function loadPdfJs(): Promise<any> {
     if (pdfjsLib) return pdfjsLib;
     if (loadPromise) return loadPromise;
 
+    // @ts-ignore
     loadPromise = import("pdfjs-dist/build/pdf.mjs")
         .then((lib) => {
             lib.GlobalWorkerOptions.workerSrc = new URL(
