@@ -33,7 +33,6 @@ export default function Home() {
         JSON.parse(resume.value) as Resume
       ))
 
-      console.log(parsedResumes);
       setResumes(parsedResumes || [])
       setLoadingResumes(false);
     }

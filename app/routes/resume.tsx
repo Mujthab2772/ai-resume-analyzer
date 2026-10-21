@@ -32,7 +32,6 @@ const Resume = () => {
             if(!resume) return;
 
             const data= JSON.parse((resume))
-            console.log(data)
 
             const resumeBolb = await  fs.read(data.resumePath)
             if(!resumeBolb) return;
